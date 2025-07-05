@@ -8,8 +8,8 @@
 	<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
 	<script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
 	<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-	
 </head>
+
 <script>
 	window.addEventListener('click', function () {
 		document.querySelector('#video').play();
@@ -28,7 +28,8 @@
 			<img id="dashboard" src="images/dashboard.png" />
 			<img id="dashboard2" src="images/dashboard-2.png" />
 			<img id="SiyaraTech_Round" src="images/SiyaraTech_Round.png" />
-
+			<img id="IS_Col_Prods" src="images/IS_Col_Prods.webp" />
+			<img id="IS_Admin_Dashboard" src="images/IS_Admin_Dashboard.webp" />
 			<!-- Video element for texture -->
 			<video id="video" autoplay loop muted playsinline webkit-playsinline>
 				<source src="images/Hi.mp4" webkit-playsinline type="video/mp4">
@@ -36,59 +37,72 @@
 
 			<a-asset-item id="boy" src="models/boy.glb"></a-asset-item>
 			<a-asset-item id="girl" src="models/girl.glb"></a-asset-item>
-
 			<a-asset-item id="tree" src="models/tree.gltf"></a-asset-item>
-
 		</a-assets>
-		<!-- <a-box width="0.25" height="0.25" depth="0.25" position="-0.25 1.85 -0.75" rotation="0 60 0" color="#4CC3D9"></a-box>
-    <a-sphere position="0 1.385 -1.25" radius="0.385" color="#EF2D5E"></a-sphere>
-    <a-cylinder position="0.25 1.1875 -0.75" radius="0.85" height="0.375" color="#FFC65D"></a-cylinder>
-    <a-plane position="0 0 -1" rotation="-90 0 0" width="1.5" height="1" color="#7BC8A4" shadow></a-plane>
-	<a-plane position="0 0 -2" scale="3 3 3" rotation="0 0 0" width="1.5" height="1"
-	material="src: #video; shader: flat;" radius="0.2"></a-plane> -->
+
 		<a-plane position="0 3 -9" scale="6.5 6.5 6.5" rotation="0 0 0" width="1.5" height="1"
 			material="src: #video; shader: flat;" radius="0.2"></a-plane>
 
-			<a-plane material="src: #SiyaraTech_Round; " position="2.8 1.8 -8" scale="2"  width="1.5" height="3.5">
-			</a-plane>
-		<!-- Image entities positioned at different locations around the marker -->
-		<!-- Cartoon Image -->
+		<a-plane material="src: #SiyaraTech_Round;" position="2.8 1.8 -8" scale="2" width="1.5" height="3.5"></a-plane>
 
-		<a-text value="Tech Dive Hub" color="Black" position="-8 6.7 -6" align="center" scale="1 1 1 "
+		<!-- Tech Dive Hub -->
+		<a-text value="Tech Dive Hub" color="Black" position="-8 6.7 -6" align="center" scale="1 1 1"
 			rotation="0 45 0"></a-text>
-		<a-plane material="src: #techdivehub; " position="-8 4 -6" rotation="0 45 0" scale="4 " width="2" height="5">
-		</a-plane>
+		<a-plane class="clickable" data-link="https://portfolio.siyaratechin.com/projects/techdiveshub"
+			material="src: #techdivehub;" position="-8 4 -6" rotation="0 45 0" scale="4" width="2" height="5"></a-plane>
+		<a-plane class="clickable" data-link="https://portfolio.siyaratechin.com/projects/techdiveshub"
+			material="src: #techdivehub2;" position="-8 3.5 0" rotation="0 90 0" scale="3" width="1.5"
+			height="3.5"></a-plane>
 
-		<a-plane material="src: #techdivehub2; " position="-8 3.5 0" rotation="0 90 0" scale="3 " width="1.5" height="3.5">
-		</a-plane>
-
-		<a-text value="Sketechbook" color="Black" position="-8 1.2 -6" align="center" scale="1 1 1 "
+		<!-- Sketchbook -->
+		<!-- <a-text value="Sketechbook" color="Black" position="-8 1.2 -6" align="center" scale="1 1 1"
 			rotation="0 45 0"></a-text>
-		<a-plane material="src: #handdrawn; " position="-8  -1.7 -6" rotation="0 45 0" scale="4 " width="2"
-			height="5">
-		</a-plane>
+		<a-plane class="clickable" data-link="https://portfolio.siyaratechin.com/sketchbook" material="src: #handdrawn;"
+			position="-8 -1.7 -6" rotation="0 45 0" scale="4" width="2" height="5"></a-plane>
+		 -->
+		<a-text value="Influencer Based Ecommerce" color="Black" position="8 9.7 -6" align="center" scale="1 1 1"
+			rotation="0 45 0"></a-text>
+			<a-plane class="clickable" data-link="https://portfolio.siyaratechin.com/projects/influencer"
+			material="src: #IS_Col_Prods;" position="8 4 -6" scale="4"  rotation="0 -45 0" width="1" height="8"></a-plane>
 
-		<a-text value="AI Interviewer" color="Black" position="8 6.7 -6" align="center" scale="1 1 1 "
+		<a-plane class="clickable" data-link="https://portfolio.siyaratechin.com/projects/influencer"
+			material="src: #IS_Admin_Dashboard;" position="8 3.5 1" scale="5"  rotation="0 -80 0" width="1.5" height="6"></a-plane>
+		<!-- AI Interviewer -->
+
+
+		<a-text value="AI Interviewer" color="Black" position="-8 1.2 -6"  align="center" scale="1 1 1"
 			rotation="0 -45 0"></a-text>
-		<a-plane material="src: #interview; " position="8 4 -6" rotation="0 -45 0" scale="4 " width="2" height="5">
-		</a-plane>
-		<a-plane material="src: #interview2; " position="8 3.5 1" rotation="0 -90 0" scale="3"  width="1.5" height="3.5">
-		</a-plane>
+		<a-plane class="clickable" data-link="https://portfolio.siyaratechin.com/projects/interviewai"
+			material="src: #interview;" position="-8 -1.7 -6" rotation="0 45 0" scale="4" width="2" height="5"></a-plane>
+		<a-plane class="clickable" data-link="https://portfolio.siyaratechin.com/projects/interviewai"
+			material="src: #interview2;" position="-8 -1.2 0" rotation="0 90 0" scale="3" width="1.5"
+			height="3.5"></a-plane>
 
-		<a-text value="E-commerce Dasboard" color="Black" position="8 1.2 -6" align="center" scale="1 1 1 "
+		<!-- E-commerce Dashboard -->
+		<a-text value="E-commerce Dasboard" color="Black" position="8 1.2 -6" align="center" scale="1 1 1"
 			rotation="0 -45 0"></a-text>
-		<a-plane material="src: #dashboard; " position="8  -1.7 -6" rotation="0 -45 0" scale="4 " width="2" height="5">
-		</a-plane>
-		<a-plane material="src: #dashboard2; " position="8  -1 1" rotation="0 -90 0" scale="3"  width="1.5" height="3.5">
-		</a-plane>
-		<!-- 		
-		<a-plane material="src: #siyaratech; " position="5  0.2 -6" rotation="0 -45 0" scale="1.5 " width="1.2" height="1.8">
-		</a-plane> -->
+		<a-plane class="clickable" data-link="https://portfolio.siyaratechin.com/projects/eccomercedashboard"
+			material="src: #dashboard;" position="8 -2.7 -3" rotation="0 -45 0" scale="4" width="2"
+			height="5"></a-plane>
+		<a-plane class="clickable" data-link="https://portfolio.siyaratechin.com/projects/eccomercedashboard"
+			material="src: #dashboard2;" position="8 -1.5 3" rotation="0 -90 0" scale="3" width="1.5"
+			height="3.5"></a-plane>
 
-
-
-		<a-camera rotation-reader> </a-camera>
+		<a-camera cursor="rayOrigin: mouse" raycaster="objects: .clickable"></a-camera>
 	</a-scene>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			document.querySelectorAll(".clickable").forEach(function (el) {
+				el.addEventListener("click", function (evt) {
+					const link = el.getAttribute("data-link");
+					if (link) {
+						window.open(link, "_blank");
+					}
+				});
+			});
+		});
+	</script>
 </body>
 
 </html>
